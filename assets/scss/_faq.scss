@@ -1,0 +1,199 @@
+// Faq Section Style
+.accordion-single {
+	transition: all 0.4s;
+	border-radius: 8px;
+	border: 1px solid $border1;
+	.header-area {
+		font-size: 20px;
+		font-weight: 600;
+		color: $white;
+		button {
+			border: unset !important;
+			color: $white;
+			padding-right: 8%;
+		}
+	}
+	@include maxQuery(500) {
+		.header-area {
+			font-size: 17px;
+			font-weight: 500;
+			color: $white;
+			button {
+				padding-right: 4%;
+			}
+		}
+	}
+}
+.header-area .accordion-btn::before {
+	border-radius: 50%;
+	width: 36px;
+	min-width: 36px;
+	height: 36px;
+	font-size: 16px;
+	background: var(--bg1);
+}
+.header-area .accordion-btn::after {
+	font-size: 24px;
+	color: var(--p1);
+}
+.faq .header-area {
+	cursor: pointer;
+}
+.faq .header-area button::before,
+.faq .header-area button::after {
+	position: absolute;
+	z-index: 1;
+	right: 0;
+	border-radius: 5px;
+}
+.faq .header-area button::before {
+	content: "";
+	background-color: $bg2;
+	width: 38px;
+	min-width: 38px;
+	height: 38px;
+	transition: all 0.4s;
+}
+.faq .header-area button::after {
+	content: "\f101";
+	font-family: "FontAwesome";
+	font-size: 20px;
+	transform: rotate(0deg);
+	transition: all 0.5s;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: $white;
+	width: 38px;
+	min-width: 38px;
+	height: 38px;
+	@include maxQuery(500) {
+		font-size: 16px;
+	}
+}
+
+.faq .content-area {
+	display: none;
+}
+.faq .active button {
+	color: $theme;
+}
+.faq .active button::after {
+	font-family: "FontAwesome";
+	transform: rotate(90deg);
+	font-weight: 700;
+	color: $theme;
+}
+
+//custom Accordion
+.service-tabing-wrap {
+	.images-remove-area {
+		transition: all 0.6s;
+		margin-bottom: -400px;
+		opacity: 0;
+		transform: rotate(60);
+	}
+	.modern-list {
+		li {
+			font-size: 16px;
+			color: $white;
+			font-weight: 400;
+			i {
+				color: $theme;
+				font-size: 14px;
+			}
+		}
+	}
+	.accordion-single {
+		border: unset;
+		overflow: hidden;
+		transition: all 0.8s;
+		border-radius: 0;
+		.accordion-btn {
+			&::after {
+				content: "\2b";
+				font-family: "FontAwesome";
+				font-size: 20px;
+				transform: rotate(0deg);
+				transition: all 0.5s;
+				font-weight: 700;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: var(--white);
+				width: 44px;
+				min-width: 44px;
+				height: 44px;
+				background: #1d1d1d;
+				border-radius: 50%;
+				&:hover {
+					cursor: pointer;
+				}
+			}
+			.mtitle-ara {
+				width: 450px;
+				.serial-badge {
+					padding: 8px 16px;
+					opacity: 0.6;
+					transition: all 0.4s;
+					.rot60 {
+						padding-left: 10px;
+					}
+				}
+				.mtitle {
+					font-size: 30px;
+					font-weight: 500;
+				}
+				.pras {
+					font-size: 16px;
+					font-weight: 400;
+					display: none !important;
+					transform: scale(0);
+				}
+			}
+		}
+		&.active {
+			.images-remove-area {
+				margin-bottom: -0px;
+				opacity: 1;
+			}
+			.accordion-btn {
+				height: initial;
+				justify-content: space-between;
+				&::after {
+					content: "\f068";
+					font-family: "FontAwesome";
+					color: $theme;
+					&:hover {
+						cursor: pointer;
+					}
+				}
+			}
+			.mtitle-ara {
+				.serial-badge {
+					opacity: 1;
+				}
+				.pras {
+					display: block !important;
+					transform: scale(1);
+				}
+			}
+			.content-area {
+				display: none !important;
+			}
+		}
+	}
+	@include maxQuery(1399) {
+		.mtitle {
+			font-size: 20px !important;
+		}
+		.tab-remove-thumb {
+			max-width: 200px;
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+//custom Accordion

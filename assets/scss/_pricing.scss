@@ -1,0 +1,114 @@
+//Pricing section
+.pricing-section {
+	z-index: 1;
+	.nav {
+		border: unset;
+		border-radius: 10px;
+		overflow: hidden;
+		.nav-item {
+			.nav-link {
+				border: unset;
+				padding: 15px 26px;
+				border-radius: 0;
+				font-size: 15px;
+				font-weight: 500;
+				color: $white;
+				background: #161616;
+				&.active {
+					background: $theme;
+					color: $black;
+				}
+			}
+		}
+	}
+}
+.other-pricing-item {
+	background: url(../img/pricing/pricing-itembg.png) no-repeat center center;
+	background-size: cover;
+	height: 243px;
+	border: 1px solid $border1;
+	border-radius: 10px;
+	overflow: hidden;
+	transition: all 0.5s;
+	.pricinge-head {
+		min-width: 400px;
+		border-right: 1px solid $border1;
+		height: 243px;
+		transition: all 0.5s;
+		p {
+			max-width: 314px;
+		}
+	}
+	.pricing-list-right {
+		.price-choose {
+			.month {
+				font-size: 18px;
+				font-weight: 700;
+			}
+		}
+	}
+	.price-under {
+		border-bottom: 1px solid $white;
+		display: inline-block;
+		i {
+			transition: all 0.4;
+		}
+		&:hover {
+			border-color: $theme;
+			color: $theme;
+			i {
+				color: $theme;
+			}
+		}
+	}
+	&:hover {
+		border-color: $theme;
+		.pricinge-head {
+			border-right: 1px solid $theme;
+		}
+	}
+	@include maxQuery(1199) {
+		.pricinge-head {
+			min-width: 300px;
+			padding-right: 10px;
+		}
+	}
+	@include maxQuery(991) {
+		display: grid !important;
+		height: initial;
+		.pricinge-head {
+			height: initial;
+			margin-bottom: 24px;
+			margin-top: 24px;
+			border-right: unset;
+		}
+	}
+}
+.prcing-shape {
+	position: absolute;
+	right: 0;
+	top: 120px;
+	z-index: -1;
+	@include maxQuery(991) {
+		top: 10px;
+		width: 250px;
+	}
+}
+
+.pricing-custom-wrap {
+	.other-pricing-item {
+		display: grid !important;
+		height: initial;
+		.pricinge-head {
+			height: initial;
+			margin-bottom: 24px;
+			margin-top: 24px;
+			border-right: unset;
+		}
+		.pricing-list-right{
+			display: grid !important;
+			justify-content: flex-start !important;
+		}
+	}
+}
+//Pricing section

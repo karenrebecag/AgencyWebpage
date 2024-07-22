@@ -1,0 +1,396 @@
+//About Section
+.about-tumb-arrow {
+	position: absolute;
+	bottom: 0;
+	left: 50px;
+	transform: rotate(-44deg);
+	z-index: -1;
+}
+//About Section
+
+//Customer Review Section
+.review-cont {
+	.texts {
+		font-size: 13px;
+	}
+	i {
+		color: $theme;
+	}
+}
+.customer-man {
+	li {
+		&:not(:last-child) {
+			margin-right: -12px;
+		}
+	}
+}
+//Customer Review Section
+
+//About Product Section
+.about-product-content {
+	.allyear-content {
+		border-top: 1px solid $theme;
+		padding-top: 24px;
+		.allyear-item {
+			position: relative;
+			&::before {
+				position: absolute;
+				left: 0;
+				top: -24px;
+				content: "";
+				width: 15px;
+				height: 16px;
+				background: $theme;
+				clip-path: polygon(48% 69%, 0 0, 100% 0);
+			}
+		}
+		@include maxQuery(400) {
+			.allyear-item {
+				h5 {
+					font-weight: 400;
+					font-size: 16px;
+				}
+				span {
+					font-size: 13px;
+					line-height: 0.1;
+				}
+			}
+		}
+	}
+}
+//About Product Section
+
+//About version02 Section
+.about-content-v02 {
+	.about-sponsor {
+		h6 {
+			font-size: 22px;
+			font-weight: 400;
+			line-height: 28px;
+		}
+		.brand-border {
+			border-bottom: 1px solid $border1;
+			border-width: 1px;
+			border-color: $border1;
+			display: block;
+			width: 60%;
+		}
+		.sponsor-inner {
+			a {
+				max-width: 150px;
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+.about-sponsor {
+	h6 {
+		font-size: 22px;
+		font-weight: 400;
+		line-height: 28px;
+	}
+	.brand-border {
+		border-bottom: 1px solid $border1;
+		border-width: 1px;
+		border-color: $border1;
+		display: block;
+		width: 60%;
+	}
+	.sponsor-inner {
+		a {
+			max-width: 150px;
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+.about-count {
+	min-width: 150px;
+	h2 {
+		display: flex;
+		align-items: center;
+		font-size: 40px;
+		font-weight: 700;
+		color: $white;
+		span {
+			font-size: 40px;
+			font-weight: 700;
+		}
+	}
+}
+//About version02 Section
+
+//Offering Section
+.offer-item {
+	background: #161616;
+	border-radius: 12px;
+	.icon-area {
+		.icon {
+			transition: all 0.5s;
+			img{
+				transition: all 0.5s;
+			}
+		}
+	}
+	&:hover {
+		.icon-area {
+			.icon {
+				transform: scale(1.09);
+				width: 50px;
+				height: 50px;
+				img {
+					width: 100%;
+					height: 100%;
+					filter: grayscale(1);
+				}
+			}
+		}
+		a {
+			color: $theme;
+			span {
+				i {
+					color: $theme;
+				}
+			}
+		}
+	}
+}
+//Offering Section
+
+//About version03 Section
+.about-section-version3 {
+	@include maxQuery(1600) {
+		padding-top: 80px;
+	}
+}
+.about-content-v3 {
+	.global-counting {
+		.counting-item {
+			h6 {
+				span {
+					font-size: 20px;
+				}
+			}
+			.pra-clr {
+				font-size: 14px;
+			}
+		}
+	}
+	@include maxQuery(450) {
+		.global-counting {
+			.counting-item {
+				.pra-clr {
+					font-size: 12px;
+					line-height: 18px !important;
+					display: block;
+				}
+			}
+		}
+	}
+}
+.about-version3-thumb {
+	position: relative;
+	height: 540px;
+	width: 100%;
+	width: 100%;
+	padding-right: 120px;
+	img {
+		width: 100%;
+		height: 100%;
+	}
+	.arrow-element {
+		position: absolute;
+		top: 50%;
+		left: 40%;
+		transform: translate(-50%, -50%);
+		max-width: 400px;
+		img {
+			width: 100%;
+		}
+	}
+	.video-popup {
+		position: absolute;
+		top: 50%;
+		right: 110px;
+		z-index: 1;
+		.hero-circle {
+			animation: textani 14s linear infinite;
+			position: absolute;
+			top: -57px;
+			left: -64px;
+			width: 142px;
+			height: 142px;
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+		i {
+			font-size: 29px;
+		}
+	}
+	@include maxQuery(1399) {
+		padding-right: 0px;
+		.arrow-element {
+			display: none;
+		}
+		.video-popup {
+			top: 50%;
+			right: initial !important;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+}
+//About version03 Section
+
+//Protfolio Section
+.protfolio-solution {
+	.protfolio-solutionwrap {
+		position: relative;
+		.swiper-pagination {
+			position: absolute;
+			right: 0;
+			bottom: 76px;
+			text-align: end;
+			left: initial;
+			font-size: 50px;
+			font-weight: 700;
+			span {
+				font-size: 50px;
+				font-weight: 700;
+			}
+		}
+		@include maxQuery(1399) {
+			.swiper-pagination {
+				bottom: 50px;
+				font-size: 36px;
+				span {
+					font-size: 36px;
+				}
+			}
+		}
+		@include maxQuery(991) {
+			.swiper-pagination {
+				bottom: 40px;
+				font-size: 28px;
+				span {
+					font-size: 28px;
+				}
+			}
+		}
+	}
+}
+.protfolio-solution-item {
+	.thumb {
+		width: 100%;
+		.mission-v4-btn {
+			@include box(80);
+			background: $theme;
+			border-radius: 12px;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			i {
+				color: $black;
+				font-size: 24px;
+			}
+		}
+		img {
+			width: 100%;
+		}
+	}
+	.content {
+		img {
+			width: 92px;
+			height: 92px;
+			object-fit: contain;
+		}
+		.cont {
+			h4 {
+				span {
+					font-size: 30px;
+				}
+			}
+		}
+	}
+	@include maxQuery(1399) {
+		.thumb {
+			.mission-v4-btn {
+				@include box(60);
+				i {
+					font-size: 24px;
+				}
+			}
+			img {
+				width: 100%;
+			}
+		}
+	}
+	@include maxQuery(1199) {
+		.thumb {
+			.mission-v4-btn {
+				@include box(50);
+				i {
+					font-size: 18px;
+				}
+			}
+		}
+		.content {
+			img {
+				width: 72px;
+				height: 72px;
+				object-fit: contain;
+			}
+			.cont {
+				h4 {
+					span {
+						font-size: 22px;
+					}
+				}
+			}
+		}
+	}
+	@include maxQuery(991) {
+		.thumb {
+			.mission-v4-btn {
+				@include box(40);
+				i {
+					font-size: 16px;
+				}
+			}
+		}
+		.content {
+			img {
+				width: 52px;
+				height: 52px;
+			}
+			.cont {
+				h4 {
+					span {
+						font-size: 22px;
+					}
+				}
+			}
+		}
+	}
+}
+//Protfolio Section
+
+
+//About Small Content Style
+.about-small-stork{
+	@include maxQuery(1800){
+		width: 100px;
+	}
+	@include maxQuery(575){
+		width: 70px;
+	}
+	@include maxQuery(400){
+		width: 40px;
+		display: none;
+	}
+}

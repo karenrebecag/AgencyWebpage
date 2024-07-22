@@ -1,0 +1,12 @@
+//Tilt Custom style
+.tilt {
+	border-radius: 5px;
+	transform-style: preserve-3d;
+
+	transform: perspective(500px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
+	&:hover {
+		background: transparent;
+		box-shadow: 0 40px 70px -15px rgba(0, 0, 0, 0.192);
+		box-shadow: none;
+	}
+}

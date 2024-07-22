@@ -1,0 +1,102 @@
+//
+//contact section
+.contact-sub-info {
+	padding: 50px 20px;
+	.msub {
+		color: $dd-clr;
+		font-size: 15px;
+	}
+	@include maxQuery(1399) {
+		padding: 24px 14px;
+	}
+}
+.contact-content {
+	padding: 60px 40px;
+	form {
+		.nice-select,
+		input,
+		textarea {
+			width: 100%;
+			outline: none;
+			background: transparent !important;
+			border: unset;
+			border-bottom: 1px solid $border1;
+			border-radius: 0;
+			padding-bottom: 10px;
+			padding-left: 0;
+			padding-right: 0;
+			padding-top: 0;
+			color: $place;
+			.current {
+				color: $place;
+			}
+			.list {
+				width: 100%;
+				background: $bg2;
+			}
+			&::after {
+				border-bottom: 2px solid $theme;
+				border-right: 2px solid $theme;
+				content: "";
+				display: block;
+				height: 10px;
+				margin-top: -4px;
+				right: 12px;
+				top: 50%;
+				width: 10px;
+			}
+		}
+		.submit-btn {
+			text-align: center;
+			border: 1px solid $border1;
+			padding: 12px 18px;
+			font-size: 16px;
+			font-weight: 500;
+			color: $white;
+			border-radius: 100px;
+			width: 100%;
+			transition: all 0.5s;
+			&:hover {
+				border-color: $theme;
+				color: $theme;
+			}
+		}
+	}
+	@include maxQuery(1399) {
+		padding: 30px 20px;
+	}
+	@include maxQuery(1199) {
+		padding: 24px 16px;
+	}
+}
+.contact-map {
+	iframe {
+		width: 100%;
+		height: 625px;
+	}
+	@include maxQuery(1399) {
+		iframe {
+			width: 100%;
+			height: 510px;
+		}
+	}
+	@include maxQuery(1199) {
+		iframe {
+			width: 100%;
+			height: 460px;
+		}
+	}
+	@include maxQuery(767) {
+		iframe {
+			width: 100%;
+			height: 360px;
+		}
+	}
+	@include maxQuery(575) {
+		iframe {
+			width: 100%;
+			height: 300px;
+		}
+	}
+}
+//contact section

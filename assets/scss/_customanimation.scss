@@ -1,0 +1,126 @@
+//custom animation
+@keyframes updown {
+	50% {
+		transform: translateY(100%);
+	}
+}
+@keyframes svgani {
+	50% {
+		fill: $theme;
+		opacity: 0.5;
+	}
+}
+//custom animation
+
+
+@keyframes textani {
+	100%{
+		transform: rotate(390deg);
+	}
+}
+
+
+//>>>>> Preloader Animation Start <<<<<//
+@-webkit-keyframes spinner {
+	to {
+		-webkit-transform: rotateZ(360deg);
+		transform: rotateZ(360deg);
+	}
+}
+
+@keyframes spinner {
+	to {
+		-webkit-transform: rotateZ(360deg);
+		transform: rotateZ(360deg);
+	}
+}
+
+@-webkit-keyframes letters-loading {
+	0%,
+	75%,
+	100% {
+		opacity: 0;
+		transform: rotateY(-90deg);
+	}
+	25%,
+	50% {
+		opacity: 1;
+		transform: rotateY(0deg);
+	}
+}
+
+@keyframes letters-loading {
+	0%,
+	75%,
+	100% {
+		opacity: 0;
+		transform: rotateY(-90deg);
+	}
+	25%,
+	50% {
+		opacity: 1;
+		transform: rotateY(0deg);
+	}
+}
+
+//>>>>> Preloader Animation Start <<<<<//
+@keyframes loaderspin {
+	0% {
+	  transform: translate(-50%, -50%) rotate(0deg);
+	}
+	100% {
+	  transform: translate(-50%, -50%) rotate(360deg);
+	}
+}
+
+
+@keyframes tpswing{
+	0% {
+    -webkit-transform: rotate(20deg);
+    -ms-transform:rotate(20deg);
+    transform: rotate(20deg);
+	}
+    100% { 
+      -webkit-transform: rotate(0deg);
+      -ms-transform:rotate(0deg);
+      transform: rotate(0deg);
+	}
+}
+
+
+@keyframes width {
+	0% {
+	  width: 0%;
+	}
+	100% {
+	  width: 100%;
+	}
+}
+
+@-webkit-keyframes width {
+	0% {
+		width: 0%;
+	  }
+	  100% {
+		width: 100%;
+	}
+}
+
+@-webkit-keyframes loaderspin {
+0% {
+	transform: translate(-50%, -50%) rotate(0deg);
+}
+100% {
+	transform: translate(-50%, -50%) rotate(360deg);
+}
+}
+
+@keyframes loaderpulse {
+0% {
+	transform: scale(1);
+}
+100% {
+	transform: scale(1.2);
+}
+}
+//>>>>> Preloader Animation End <<<<<//

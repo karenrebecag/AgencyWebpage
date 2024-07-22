@@ -1,0 +1,277 @@
+//Team Style
+.team-details-box {
+	border-radius: 12px;
+}
+.team-common-item {
+	.namebox {
+		background: radial-gradient(
+			267.9% 200.83% at 47.19% -80%,
+			rgba(255, 255, 255, 0.4) 0%,
+			rgba(255, 255, 255, 0) 100%
+		);
+		opacity: 0.8;
+		backdrop-filter: blur(21px);
+		border-radius: 10px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		margin: 16px;
+		width: 90%;
+		h5 {
+			font-size: 21px;
+		}
+	}
+	.common-social {
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		transform: scale(0);
+		transition: all 0.5s;
+		li {
+			a {
+				border-radius: 50%;
+				border-color: $white;
+				&:hover {
+					border-color: $theme;
+				}
+			}
+		}
+	}
+	&:hover {
+		.common-social {
+			transform: scale(1);
+		}
+	}
+	@include maxQuery(1399) {
+		.namebox {
+			margin: 8px;
+			span {
+				font-size: 14px;
+				margin-bottom: 2px !important;
+			}
+			h5 {
+				font-size: 18px;
+				font-weight: 500;
+			}
+		}
+	}
+}
+
+.related-title {
+	font-size: 40px;
+	@include maxQuery(1399) {
+		font-size: 29px;
+	}
+	@include maxQuery(991) {
+		font-size: 24px;
+	}
+	@include maxQuery(575) {
+		font-size: 18px;
+	}
+}
+.slider-button-60 {
+	border: unset;
+	.cmn-prev,
+	.cmn-next {
+		min-width: 60px !important;
+		width: 60px !important;
+		height: 60px !important;
+		min-height: 60px !important;
+		display: block;
+		@include maxQuery(1199) {
+			min-width: 40px !important;
+			width: 40px !important;
+			height: 40px !important;
+			min-height: 40px !important;
+		}
+	}
+}
+
+//team staf
+.team-staft {
+	background: url(../../assets/img/team/team-stafbg.png) no-repeat center
+		center;
+	background-size: cover;
+}
+.team-staf-item {
+	border-radius: 12px;
+	.thumb {
+		width: 240px;
+		height: 240px;
+		border-radius: 50%;
+		margin: 0 auto 30px;
+		img {
+			border-radius: 50%;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.trans-social {
+		li {
+			a {
+				svg {
+					path {
+						stroke: #454750;
+					}
+				}
+				&:hover {
+					svg {
+						path {
+							stroke: $theme;
+							fill: $theme;
+						}
+					}
+				}
+			}
+		}
+	}
+	@include maxQuery(1399) {
+		.thumb {
+			width: 140px;
+			height: 140px;
+			margin: 0 auto 18px;
+		}
+	}
+}
+//Team version 01
+.team-card01 {
+	.thumb {
+		&::before {
+			position: absolute;
+			content: "";
+			bottom: -100%;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(
+				180deg,
+				rgba(239, 100, 76, 0) 64.05%,
+				#F03030 115.68%
+			);
+			transition: all 0.5s;
+		}
+		.common-social {
+			position: absolute;
+			bottom: 0;
+			left: -100%;
+			transition: all 0.5s;
+			li {
+				a {
+					border-color: $white;
+					border-radius: 50%;
+					svg {
+						width: 14px !important;
+						path {
+							stroke: $white;
+							fill: $white;
+						}
+					}
+					&:hover {
+						border-color: $theme;
+
+						svg {
+							path {
+								stroke: $black !important;
+								fill: $black !important;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.content {
+		.bspan-clr {
+			display: flex;
+			align-items: center;
+			transition: all 0.4s;
+			&::before {
+				opacity: 0;
+				position: absolute;
+				left: 0;
+				width: 24px;
+				height: 2px;
+				content: "";
+				background: $theme;
+			}
+		}
+	}
+	&:hover {
+		.content {
+			.bspan-clr {
+				padding-left: 30px;
+				&::before {
+					opacity: 1;
+				}
+			}
+		}
+		.thumb {
+			&::before {
+				bottom: 0;
+				background: linear-gradient(
+					180deg,
+					rgba(239, 100, 76, 0) 64.05%,
+					#F03030 115.68%
+				);
+			}
+			.common-social {
+				transition: all 0.4s;
+				bottom: 24px;
+				left: 24px;
+				li {
+					a {
+						border-color: $white;
+						border-radius: 50%;
+						svg {
+							width: 14px !important;
+							path {
+								stroke: $white;
+								fill: $white;
+							}
+						}
+						&:hover {
+							border-color: $theme;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+//Team Staft 011
+.team-staft-slidewrap011 {
+	background: #0e0e0e;
+	.comm {
+		.cmn-textslide {
+			font-size: 55px !important;
+			font-weight: 400 !important;
+		}
+		.rot60 {
+			transform: rotate(-60deg) !important;
+			i {
+				color: $theme2;
+			}
+		}
+	}
+	@include maxQuery(991) {
+		.comm {
+			.cmn-textslide {
+				font-size: 36px !important;
+				font-weight: 400 !important;
+			}
+			.rot60 {
+				transform: rotate(-60deg) !important;
+				i {
+					color: $theme2;
+				}
+			}
+		}
+	}
+}
+.custom-bg{
+	background: radial-gradient(267.9% 200.83% at 47.19% -80%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+}
+.professional-info-details{
+	border-radius: 10px;
+}

@@ -1,0 +1,52 @@
+//Preloader
+#progress {
+	background-color: $theme;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	position: fixed;
+	right: 20px;
+	z-index: 9999;
+	display: none;
+	bottom: 20px;
+	border-radius: 50%;
+	transition: all 0.4s ease-in-out;
+	border: 2px solid $white;
+	i {
+		color: $black;
+	}
+	#valiu {
+		display: block;
+		img {
+			width: 16px;
+		}
+	}
+	&:hover {
+		cursor: pointer;
+		background-color: $theme;
+	}
+}
+//Preloader
+
+//Error Page
+.error-content {
+	.cmn-btn {
+		border: 1px solid $theme;
+		&:hover {
+			color: $theme;
+			background: transparent;
+		}
+	}
+}
+//Error Page
+.mt-50 {
+	margin-top: 50px;
+}
+
+.container{
+	@include minQuery(575){
+		max-width: 1474px;
+		margin: 0 auto;
+	}
+}

@@ -1,0 +1,27 @@
+.stitle {
+	font-size: 55px;
+	span {
+		font-size: 55px;
+		font-weight: 400;
+		font-style: italic;
+	}
+	@include maxQuery(991) {
+		font-size: 44px;
+		span {
+			font-size: 44px;
+		}
+	}
+	@include maxQuery(575) {
+		font-size: 36px;
+		span {
+			font-size: 36px;
+		}
+	}
+	@include maxQuery(480) {
+		font-size: 29px;
+		span {
+			font-size: 29px;
+		}
+	}
+}
+

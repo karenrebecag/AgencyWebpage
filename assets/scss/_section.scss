@@ -1,0 +1,43 @@
+
+//Customer Review
+.customer-review-active{
+    display: flex;
+    align-items: center;
+    a{
+        &:not(:first-child){
+            margin-left: -14px;
+        }
+    }
+}
+//Customer Review
+
+//Offer Background
+.offer-sectionv04{
+    background: url(../img/banner/offer-bg.png) no-repeat center center;
+    background-size: cover;
+    .offer-item{
+        background: #1B1B1B;
+        border-radius: 12px;
+        .seri{
+            font-size: 50px;
+            font-weight: 600;
+            font-family: $heading-font;
+            color: $white;
+            opacity: 15%;
+        }
+        &:hover{
+            h5{
+                a{
+                    color: $theme;
+                }
+            }
+            .btn-hover{
+                color: $theme;
+                i{
+                    color: $theme;
+                }
+            }
+        }
+    }
+}
+//Offer Background

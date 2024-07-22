@@ -1,0 +1,89 @@
+//Custom Search Wrap
+.search-wrap {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999999;
+	background-color: $bg1;
+	.search-inner {
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
+
+	.search-cell {
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		transform: translateY(-50%);
+	}
+
+	.search-field-holder {
+		width: 50%;
+		margin: auto;
+		position: relative;
+		animation: slideInUp 0.3s;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.search-wrap .search-field-holder {
+		width: 70%;
+	}
+}
+@media (max-width: 575px) {
+	.search-wrap .search-field-holder {
+		width: 80%;
+	}
+}
+.search-wrap .main-search-input {
+	width: 100%;
+	height: 50px;
+	border: 0;
+	padding: 0 0px;
+	text-transform: capitalize;
+	background: transparent;
+	font-size: 16px !important;
+	color: $theme;
+	border-bottom: 1px solid $theme;
+	text-align: start;
+	letter-spacing: 2px;
+	::placeholder {
+		font-size: 16px;
+	}
+}
+@media (max-width: 575px) {
+	.search-wrap .main-search-input {
+		height: 50px;
+		padding: 0 0;
+		line-height: 50px;
+		font-size: 16px;
+	}
+}
+
+.search-wrap input.form-control,
+.search-wrap input.form-control:focus {
+	background-color: $theme;
+}
+
+input.main-search-input::placeholder {
+	color: $theme;
+	opacity: 1;
+	font-size: 25px;
+}
+@media (max-width: 575px) {
+	input.main-search-input::placeholder {
+		font-size: 18px;
+	}
+}
+.search-close {
+	position: absolute;
+	top: 50px;
+	right: 50px;
+	font-size: 30px;
+	color: $theme;
+	cursor: pointer;
+}

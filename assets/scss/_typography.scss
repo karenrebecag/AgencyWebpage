@@ -1,0 +1,469 @@
+/* -----------------------
+    Template Default Fonts
+ ------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+$heading-font: "Inter", sans-serif;
+$body-font: "Inter", sans-serif;
+
+body {
+	font-family: $body-font;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 28px;
+	color: $white;
+	background-color: red;
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+button {
+	border: none;
+	background-color: transparent;
+	padding: 0;
+}
+
+input:focus {
+	color: $white;
+	outline: none;
+}
+
+input {
+	color: $white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $heading-font;
+	margin: 0px;
+	padding: 0;
+	color: $white;
+	text-transform: capitalize;
+	@include transition;
+}
+
+h1 {
+	font-size: 80px;
+	font-weight: 700;
+	line-height: 112%;
+}
+
+h2 {
+	font-size: 55px;
+	line-height: 125%;
+	font-weight: 700;
+}
+h3 {
+	font-size: 48px;
+	font-weight: 700;
+}
+
+h4 {
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 130%;
+}
+
+h5 {
+	font-size: 24px;
+	font-weight: 700;
+}
+
+h6 {
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 145%;
+}
+
+a {
+	text-decoration: none;
+	outline: none !important;
+	cursor: pointer;
+	color: $white;
+	@include transition;
+}
+
+p {
+	margin: 0px;
+	@include transition;
+	font-size: 16px;
+	font-family: $body-font;
+	color: $white;
+}
+.zindex1{
+	z-index: 1;
+}
+.whitehover{
+	color: $white !important;
+}
+.pra-clr {
+	color: #bebebe !important;
+}
+.theme-border {
+	border: 1px solid $theme !important;
+}
+.pra-border {
+	border: 1px solid #bebebe;
+}
+.radius100 {
+	border-radius: 100px;
+}
+.bb-border {
+	border-bottom: 1px solid $border1 !important;
+}
+.bt-border {
+	border-top: 1px solid $border1 !important;
+}
+
+.htheme {
+	transition: all 0.4s;
+	&:hover {
+		color: $theme;
+	}
+}
+.tag-clr {
+	color: $tag;
+}
+.fs14 {
+	font-size: 14px;
+}
+span {
+	margin: 0px;
+	@include transition;
+	font-size: 16px;
+	font-family: $body-font;
+	color: $white;
+}
+
+//Common Social
+.common-social {
+	li {
+		a {
+			@include box(36);
+			display: block;
+			border: 1px solid var(--border1);
+			transition: all 0.5s;
+			&:hover {
+				background: $theme;
+				border-color: $theme;
+				svg {
+					path {
+						stroke: $black;
+					}
+				}
+				i {
+					color: $black;
+				}
+			}
+		}
+	}
+}
+
+//project slide cmn btn
+.slider-button {
+	border-top: 1px solid $border1;
+	border-bottom: 1px solid $border1;
+	.cmn-next,
+	.cmn-prev {
+		@include box(70);
+		border-radius: 50%;
+		transition: all 0.4s;
+		i {
+			color: $border1;
+			font-size: 24px;
+			transition: all 0.4s;
+		}
+		&:hover {
+			background: $theme;
+			border-color: $theme;
+			i {
+				color: $black;
+			}
+		}
+		@include maxQuery(1399) {
+			@include box(48);
+			i {
+				font-size: 17px;
+			}
+		}
+		@include maxQuery(1399) {
+			@include box(38);
+			i {
+				font-size: 16px;
+			}
+		}
+	}
+	.previus-text {
+		font-size: 22px;
+	}
+	.project-storke {
+		font-size: 44px;
+		font-weight: 700;
+		font-family: $heading-font;
+		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-color: #454750;
+		color: transparent;
+		display: block;
+	}
+	@include maxQuery(575) {
+		.previus-text {
+			font-size: 18px;
+		}
+		.project-storke {
+			font-size: 30px;
+		}
+	}
+	@include maxQuery(575) {
+		.previus-text {
+			font-size: 16px;
+		}
+		.project-storke {
+			font-size: 24px;
+		}
+	}
+	@include maxQuery(400) {
+		.previus-text {
+			font-size: 14px;
+		}
+		.project-storke {
+			display: none;
+		}
+	}
+}
+//project slide cmn btn
+
+//global display center
+.d-center {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+}
+
+//css extra clss
+.spantext-clr {
+	color: $spantext !important;
+}
+
+//Common Form style
+.common-form {
+	textarea,
+	input {
+		outline: none;
+		border-radius: 8px;
+		padding: 16px 19px;
+		color: $pra-clr;
+		font-size: 16px;
+		border: 1px solid var(--border1);
+		background: transparent;
+		width: 100%;
+	}
+	::placeholder {
+		color: $pra-clr;
+		font-size: 16px;
+	}
+	.getin-touch {
+		border: 1px solid $white;
+		border-radius: 8px;
+		transition: all 0.5s;
+		.icons {
+			transform: rotate(35deg);
+			display: block;
+			transition: all 0.5;
+			i {
+				transition: all 0.5s;
+			}
+		}
+		&:hover {
+			border-color: $theme;
+			color: $theme;
+			.icons {
+				transform: rotate(-35deg);
+			}
+		}
+	}
+}
+
+.black-clr {
+	color: $black;
+}
+.blackbg{
+	background: $blackbg;
+}
+.white-clr {
+	color: $white;
+}
+.whitebg {
+	background: $white;
+}
+.theme-clr {
+	color: $theme;
+}
+.theme2-clr {
+	color: $theme2;
+}
+.bg1-clr {
+	background: $bg1;
+}
+.bg2-clr {
+	background: $bg2 !important;
+}
+.bg3-clr {
+	background: $bg3;
+}
+.bnbg{
+	background: $bnbg;
+}
+.themebg {
+	background: $theme;
+}
+.hb-border {
+	border-bottom: 1px solid $border1;
+}
+.cmn-border {
+	border: 1px solid #454750 !important;
+}
+.rot60 {
+	transform: rotate(60deg);
+	transition: all 0.4s;
+}
+.bspan-clr {
+	color: $bspan;
+}
+
+.pt-space {
+	padding-top: 130px;
+}
+.pb-space {
+	padding-bottom: 130px;
+}
+
+@include maxQuery(1399) {
+	h1 {
+		font-size: 64px;
+	}
+
+	h2 {
+		font-size: 44px;
+	}
+	h3 {
+		font-size: 38px;
+	}
+
+	h4 {
+		font-size: 26px;
+	}
+
+	.pt-space {
+		padding-top: 80px;
+	}
+	.pb-space {
+		padding-bottom: 80px;
+	}
+
+	.pt-space {
+		padding-top: 100px;
+	}
+	.pb-space {
+		padding-bottom: 100px;
+	}
+}
+@include maxQuery(1199) {
+	h1 {
+		font-size: 60px;
+	}
+
+	h2 {
+		font-size: 42px;
+	}
+	h3 {
+		font-size: 36px;
+	}
+
+	h4 {
+		font-size: 24px;
+	}
+
+	h5 {
+		font-size: 20px;
+	}
+
+	h6 {
+		font-size: 18px;
+	}
+
+	.pt-space {
+		padding-top: 80px;
+	}
+	.pb-space {
+		padding-bottom: 80px;
+	}
+}
+@include maxQuery(991) {
+	h1 {
+		font-size: 42px;
+	}
+
+	h2 {
+		font-size: 36px;
+	}
+	h3 {
+		font-size: 29px;
+	}
+
+	h4 {
+		font-size: 20px;
+	}
+
+	h5 {
+		font-size: 19px;
+	}
+
+	h6 {
+		font-size: 17px;
+	}
+
+	.pt-space {
+		padding-top: 70px;
+	}
+	.pb-space {
+		padding-bottom: 70px;
+	}
+}
+
+//section default overflow
+section,
+footer {
+	overflow: hidden;
+}
+
+//Defaullt Wbkit
+::-webkit-scrollbar {
+	width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}

@@ -1,0 +1,66 @@
+//Tab study
+.case-study-section {
+	background: url(../img/team/team-stafbg.png) no-repeat center center;
+	background-size: cover;
+}
+//Tab study
+
+//Tab  Custom case
+.onhover-tabbing-wrap {
+	.nav-tabs {
+		display: grid;
+		width: 100%;
+		border: unset;
+		.nav-link {
+			display: flex;
+			align-items: flex-end;
+			justify-content: space-between;
+			gap: 8px 14px;
+			outline: none;
+			border: unset;
+			border-bottom: 1px solid $border1;
+			.right-info {
+				font-size: 14px;
+				text-transform: uppercase;
+				font-weight: 600;
+				color: $white;
+				i {
+					color: $white;
+				}
+			}
+			&.active,
+			&:hover {
+				border-radius: unset;
+				background: transparent;
+				h4{
+					color: $theme;
+				}
+				.right-info {
+					color: $theme;
+					i {
+						color: $theme;
+					}
+				}
+			}
+		}
+	}
+	.tcase-thumb {
+		width: 100%;
+		img {
+			width: 100%;
+		}
+	}
+	@include maxQuery(500) {
+		.nav-link {
+			flex-wrap: wrap;
+			font-size: 20px !important;
+			font-weight: 500 !important;
+			.right-info {
+				font-size: 12px !important;
+				font-weight: 400 !important;
+				color: $white;
+			}
+		}
+	}
+}
+//Tab  Custom case

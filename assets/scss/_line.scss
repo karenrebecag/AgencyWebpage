@@ -1,0 +1,114 @@
+//Line custom animation
+.line-shape {
+	max-width: 1531px;
+	height: 100vh;
+	position: fixed;
+	left: 50%;
+	top: -20px;
+	justify-content: space-between;
+	margin: 0 auto;
+	transform: translateX(-50%);
+}
+.line-shape span {
+	position: relative;
+	width: 1px;
+	height: 100%;
+	display: block;
+	background: #292929;
+}
+.line-shape span::before,
+.line-shape span::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	background: $theme;
+	box-shadow: rgba(228, 235, 242, 0.2) 0px 8px 24px;
+	border-top-left-radius: 50px;
+	border-top-right-radius: 50px;
+	clip-path: polygon(
+		51% 8%,
+		68% 15%,
+		66% 40%,
+		60% 78%,
+		56% 100%,
+		46% 100%,
+		42% 84%,
+		38% 56%,
+		34% 17%
+	);
+}
+.line-shape span::after {
+	animation: dscroll 2s linear infinite;
+	width: 2px;
+	height: 24px;
+	bottom: 0;
+	left: 0;
+	background: $theme;
+	box-shadow: rgba(228, 235, 242, 0.2) 0px 8px 24px;
+	border-top-left-radius: 50px;
+	border-top-right-radius: 50px;
+	clip-path: polygon(
+		51% 8%,
+		68% 15%,
+		66% 40%,
+		60% 78%,
+		56% 100%,
+		46% 100%,
+		42% 84%,
+		38% 56%,
+		34% 17%
+	);
+}
+.line-shape span:nth-child(2)::after {
+	animation: dscroll 2.1s linear infinite;
+}
+.line-shape span:nth-child(3)::after {
+	animation: dscroll 2.2s linear infinite;
+}
+.line-shape span:nth-child(4)::after {
+	animation: dscroll 2.3s linear infinite;
+}
+.line-shape span:nth-child(5)::after {
+	animation: dscroll 2.4s linear infinite;
+}
+.line-shape span:nth-child(6)::after {
+	animation: dscroll 1s linear infinite;
+}
+.line-shape span:nth-child(7)::after {
+	animation: dscroll 3.5s linear infinite;
+}
+
+.line-shape span:nth-child(2)::backdrop {
+	animation: dscroll 4.1s linear infinite;
+}
+.line-shape span:nth-child(3)::before {
+	animation: dscroll 4.2s linear infinite;
+}
+.line-shape span:nth-child(4)::before {
+	animation: dscroll 4.3s linear infinite;
+}
+.line-shape span:nth-child(5)::before {
+	animation: dscroll 4.4s linear infinite;
+}
+.line-shape span:nth-child(6)::before {
+	animation: dscroll 4s linear infinite;
+}
+.line-shape span:nth-child(7)::before {
+	animation: dscroll 4.5s linear infinite;
+}
+//Line custom animation
+@keyframes dscroll {
+	100% {
+		transform: translateY(100vh);
+	}
+}
+
+.text-whitess {
+	color: $black !important;
+	font-weight: 500;
+
+	&:hover {
+		color: $theme;
+	}
+}

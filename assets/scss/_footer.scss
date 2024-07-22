@@ -1,0 +1,78 @@
+//Footer Version One
+.footer-version-one {
+	background: url(../../assets/img/footer/footer-version1bg.png) no-repeat
+		center center;
+	background-size: cover;
+}
+.footer-logov1 {
+	@include maxQuery(1399) {
+		width: 100px;
+		margin: 0 auto;
+		img {
+			width: 100%;
+			width: 100%;
+		}
+	}
+}
+.flink-items {
+	transition: all 0.6s;
+	i {
+		transition: all 0.6s;
+	}
+	&:hover {
+		color: $theme !important;
+		.ani-icons {
+			transform: rotate(180deg);
+			i {
+				color: $theme !important;
+			}
+		}
+	}
+}
+.foote-formv1 {
+	border: 1px solid $border1;
+	border-radius: 4px;
+	padding: 5px;
+	button {
+		width: 53px;
+		height: 50px;
+		padding: 5px 16px;
+	}
+	input {
+		background: transparent;
+		border: unset;
+		outline: none;
+		padding: 10px 24px;
+		color: $pra-clr;
+		width: initial;
+	}
+	::placeholder {
+		color: $border1;
+	}
+	@include maxQuery(1399) {
+		input {
+			padding: 10px 10px;
+		}
+	}
+}
+.footer-topscroll {
+	@include box(58);
+	border-radius: 50%;
+	display: block;
+	transition: all 0.5s;
+	i {
+		transition: all 0.5s;
+		color: $black;
+	}
+	&:hover {
+		background: $white;
+		border-color: $theme;
+		i {
+			color: $black;
+		}
+	}
+	@include maxQuery(575) {
+		margin: 0 auto;
+	}
+}
+//Footer Version One
