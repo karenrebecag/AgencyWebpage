@@ -217,9 +217,9 @@
 }
 //Header style two
 .header-sectionv2.header-fixed {
-	background: #BD272D !important;
+	background: #000000 !important;
 	@include maxQuery(991) {
-		background: #BD272D !important;
+		background: #000000 !important;
 		z-index: 9999 !important;
 	}
 }
@@ -253,7 +253,7 @@
 		}
 	}
 	@include maxQuery(991) {
-		background: #BD272D;
+		background: #000000;
 		.search-trigger {
 			font-size: 19px !important;
 			font-weight: 600;
